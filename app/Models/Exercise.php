@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
-class exercises extends Model
+class Exercise extends Model
 {
     protected $fillable = 
     [
@@ -16,6 +16,6 @@ class exercises extends Model
 
     public function workouts(): BelongsToMany
     {
-        return $this->belongsToMany(workouts::class);
+        return $this->belongsToMany(Exercise::class);
     }
 }
